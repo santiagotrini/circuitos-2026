@@ -1,6 +1,8 @@
 # Circuitos
 
-1. Hoy 10/09 subo un [circuito](./00-4instr) de un *datapath* de 4 instrucciones. La idea era entender el ciclo de instrucción y como una instrucción pasa por las etapas de *fetch*, *decode* y *execute*. Está lejos de ser una computadora completa.
+## Primer circuito
+
+Hoy 10/09 subo un [circuito](./00-4instr) de un *datapath* de 4 instrucciones. La idea era entender el ciclo de instrucción y como una instrucción pasa por las etapas de *fetch*, *decode* y *execute*. Está lejos de ser una computadora completa.
 
 ![datapath uno](./img/uno.png)
 
@@ -12,6 +14,14 @@ La arquitectura usa un *opcode* de 2 bits y un *immediate* o *address* de 6 bits
 |`mul`|01|`A = A * imm`|
 |`jze`|10|`if (A == 0) PC = addr`|
 |`lda`|11|`A = imm`|
+
+## Segundo circuito
+
+Hoy 14/09 subo un [circuito](./01-fetch) con la fase de *fetch* del *datapath* de ciclo único de MIPS.
+
+![instruction fetch](./img/IF.png)
+
+La única salvedad del circuito es que Logisim no permite ROMs con direcciones de más de 24 bits, en la CPU real sería de 32 bits el puerto de direcciones de la ROM (la memoria de instrucciones).
 
 ## Aclaraciones
 
