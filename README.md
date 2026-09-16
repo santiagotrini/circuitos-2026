@@ -31,6 +31,11 @@ Hoy 14/09 cuarto primera estuvo armando el [archivo de registros](./02-regfile),
 
 Lo tedioso está en que estos decodificadores y multiplexores tienen 32 salidas o entradas y son muchos cables. En Logisim conviene resolverlo usando tuneles porque sino los cables empiezan a cruzarse entre sí y la chance de cometer un error es alta.
 
+## Cuarto circuito
+
+Hoy 16/09 agregamos la fase de *instruction decode*. En este [circuito](./03-decode) llega la instrucción de 32 bits y se leen los registros del archivo de registros, se extiende a 32 bits el inmediato y se pasan los códigos `op` y `funct` a control para decodificar qué instrucción ejecutar.
+
+![instruction decode](./img/decode.png)
 
 ## Aclaraciones
 
