@@ -37,6 +37,24 @@ Hoy 16/09 agregamos la fase de *instruction decode*. En este [circuito](./03-dec
 
 ![instruction decode](./img/decode.png)
 
+## Quinto circuito
+
+También el 16/09 los alumnos de cuarto segunda estuvieron armando la ALU de MIPS en Logisim. [Esta ALU](./04-alu) implementa un subconjunto de las operaciones de la CPU real, usa una señal de control de 4 bits llamada *ALU Control* como se muestra en la siguiente tabla.
+
+|ALU Control|Operación|
+|---|---|
+|0000|AND|
+|0001|OR|
+|0010|suma|
+|0110|resta|
+|0111|SLT|
+|1100|NOR|
+
+La idea principal en una ALU cualquiera es que el circuito realiza todas las operaciones sobre A y B en paralelo pero en resultado solo vemos la operación que elige el multiplexor.
+
+![alu](./img/alu.png)
+
+
 ## Aclaraciones
 
 Los archivos `.circ` son para abrir con Logisim Evolution, lo pueden descargar [acá](https://github.com/logisim-evolution/logisim-evolution/).
