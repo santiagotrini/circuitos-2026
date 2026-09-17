@@ -54,6 +54,11 @@ La idea principal en una ALU cualquiera es que el circuito realiza todas las ope
 
 ![alu](./img/alu.png)
 
+## Sexto circuito
+
+Hoy 17/09 con cuarto primera subimos la [fase](./05-execute) de *execute*. Acá vemos la lógica para el `beq`, la memoria de datos para `lw` y `sw` y la ALU para las cuentas.
+
+![exec](./img/exec.png)
 
 ## Aclaraciones
 
