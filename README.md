@@ -60,6 +60,24 @@ Hoy 17/09 con cuarto primera subimos la [fase](./05-execute) de *execute*. Acá 
 
 ![exec](./img/exec.png)
 
+## Séptimo circuito
+
+Hoy 23/09 con cuarto segunda subimos la [unidad de control](./06-control) principal. Este circuito es un decodificador que recibe los 6 bits del *opcode* y produce como salida las señales de control necesarias para el camino de datos que estamos implementando. Las instrucciones conocidas para este decodificador son: `addi`, `ori`, `beq`, `j`, `lw`, `sw` y las de tipo R.
+
+|Opcode|Instrucción|
+|---|---|
+|0|Tipo R|
+|2|`j`|
+|4|`beq`|
+|8|`addi`|
+|13|`ori`|
+|35|`lw`|
+|43|`sw`|
+
+![ctrl](./img/control.png)
+
+La señal de control *ALUOp* es necesaria porque no todas las instrucciones de tipo I realizan una suma en la ALU, `beq` hace una resta y `ori` un OR.
+
 ## Aclaraciones
 
 Los archivos `.circ` son para abrir con Logisim Evolution, lo pueden descargar [acá](https://github.com/logisim-evolution/logisim-evolution/).
