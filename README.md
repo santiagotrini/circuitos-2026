@@ -78,6 +78,28 @@ Hoy 23/09 con cuarto segunda subimos la [unidad de control](./06-control) princi
 
 La señal de control *ALUOp* es necesaria porque no todas las instrucciones de tipo I realizan una suma en la ALU, `beq` hace una resta y `ori` un OR.
 
+## Octavo circuito
+
+La [unidad de control de la ALU](./07-alu-ctrl). Hoy 23/09 con cuarto segunda vimos como se generan las señales de control para la ALU a partir de *ALU Op* y del campo *funct* de las instrucciones tipo R. Para implementar el circuito se usaron las constantes que necesitamos como salidas conectadas a un par de multiplexores que eligen primero a partir de *funct* y luego según el valor de *ALU Op*.
+
+![alu ctrl](./img/alu-ctrl.png)
+
+El comportamiento del circuito se puede resumir con la siguiente tabla.
+
+|Instrucción|funct|ALU Op|ALU control|
+|---|---|---|---|
+|`lw`|xxxxxx|00|0010|
+|`sw`|xxxxxx|00|0010|
+|`beq`|xxxxxx|01|0110|
+|`add`|100000|10|0010|
+|`sub`|100010|10|0110|
+|`and`|100100|10|0000|
+|`or`|100101|10|0001|
+|`slt`|101010|10|0111|
+|`nor`|100111|10|1100|
+|`addi`|xxxxxx|00|0010|
+|`ori`|xxxxxx|11|0001|
+
 ## Aclaraciones
 
 Los archivos `.circ` son para abrir con Logisim Evolution, lo pueden descargar [acá](https://github.com/logisim-evolution/logisim-evolution/).
