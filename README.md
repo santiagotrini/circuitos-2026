@@ -100,6 +100,14 @@ El comportamiento del circuito se puede resumir con la siguiente tabla.
 |`addi`|xxxxxx|00|0010|
 |`ori`|xxxxxx|11|0001|
 
+## Noveno circuito
+
+Ahora sí el [circuito completo](./08-single-cycle) del camino de datos de ciclo único. Se le conoce con ese nombre porque por cada ciclo de reloj se ejecuta una instrucción en la CPU. No es lo que realmente sucede en la CPU pero es una buena aproximación para entender el flujo de datos, direcciones y señales de control en la microarquitectura de MIPS de 32 bits.
+
+![datapath](./img/single-cycle.png)
+
+Es importante aclarar que este circuito es una implementación posible para el conjunto de instrucciones de MIPS pero no es la única. Distintas microarquitecturas pueden significar distinto rendimiento con la misma arquitectura (conjunto de instrucciones). Además este circuito por razones pedagógicas no implementa el conjunto de instrucciones completo para no hacerlo demasiado complejo.
+
 ## Aclaraciones
 
 Los archivos `.circ` son para abrir con Logisim Evolution, lo pueden descargar [acá](https://github.com/logisim-evolution/logisim-evolution/).
